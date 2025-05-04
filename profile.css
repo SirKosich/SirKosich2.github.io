@@ -1,0 +1,212 @@
+body{
+    background-image:url("img/123.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+header{
+    max-height: 300px;
+    max-width: 1920px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.head1{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 25px;
+    justify-content: space-around;
+    
+}
+
+hr{
+    border-radius: 20px;
+    color:#000000;
+}
+
+.socseti{
+    display: flex;
+    margin-top: 25px;
+    margin-right: 150px;
+    flex-direction: column;
+
+}
+
+.var1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.var2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Основной контейнер аудиоплеера */
+.audio-container {
+    background-color: #a0e3fb; /* Полупрозрачный черный фон */
+    border-radius: 15px; /* Закругленные углы */
+    padding: 25px; /* Внутренние отступы */
+    width: 90%; /* Ширина относительно родителя */
+    max-width: 800px; /* Максимальная ширина */
+    backdrop-filter: blur(5px); /* Размытие фона */
+    box-shadow: 0 0 20px rgba(255, 94, 98, 0.3); /* Тень с акцентным цветом */
+}
+
+/* Стилизация элемента audio */
+#audio-element {
+    width: 100%; /* Полная ширина контейнера */
+    margin-bottom: 20px; /* Отступ снизу */
+    border-radius: 10px; /* Закругленные углы */
+    background-color: #fba0e3; /* Полупрозрачный фон */
+}
+
+/* Контейнер эквалайзера */
+.equalizer {
+    display: flex; /* Флекс-расположение колонок */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: flex-end; /* Привязка к нижнему краю */
+    height: 150px; /* Фиксированная высота */
+    gap: 4px; /* Расстояние между колонками */
+    margin: 25px 0; /* Внешние отступы */
+}
+
+/* Отдельная колонка эквалайзера */
+.bar {
+    width: 8px; /* Ширина колонки */
+    background: linear-gradient(to top, #ff5e62, #ff9966); /* Градиентный фон */
+    border-radius: 3px 3px 0 0; /* Закругление только сверху */
+    transition: height 0.1s ease; /* Плавное изменение высоты */
+}
+
+/* Контейнер кнопок управления */
+.player-controls {
+    display: flex; /* Флекс-расположение кнопок */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 20px; /* Расстояние между кнопками */
+    margin: 20px 0; /* Внешние отступы */
+}
+
+/* Стили кнопок управления */
+.player-controls button {
+    background: rgba(255, 94, 98, 0.7); /* Цвет фона с прозрачностью */
+    border: none; /* Убираем границу */
+    color: white; /* Цвет текста */
+    width: 50px; /* Фиксированная ширина */
+    height: 50px; /* Фиксированная высота */
+    border-radius: 50%; /* Круглая форма */
+    font-size: 20px; /* Размер иконки */
+    cursor: pointer; /* Курсор-указатель */
+    transition: all 0.3s; /* Плавные анимации */
+}
+
+/* Состояние при наведении на кнопку */
+.player-controls button:hover {
+    background: rgba(255, 94, 98, 1); /* Яркий цвет фона */
+    transform: scale(1.1); /* Увеличение размера */
+}
+
+/* Неактивные кнопки */
+.player-controls button:disabled {
+    background: #555; /* Серый цвет */
+    cursor: not-allowed; /* Курсор "недоступно" */
+}
+
+/* Блок с информацией о треке */
+.player-info {
+    text-align: center; /* Выравнивание по центру */
+    margin: 15px 0; /* Внешние отступы */
+    font-size: 18px; /* Размер текста */
+}
+
+/* Контейнер плейлиста */
+.playlist-container {
+    margin-top: 30px; /* Отступ сверху */
+}
+
+/* Заголовок плейлиста */
+.playlist-container h3 {
+    border-bottom: 2px solid #ff5e62; /* Линия под текстом */
+    padding-bottom: 8px; /* Отступ снизу */
+    margin-bottom: 15px; /* Отступ после заголовка */
+}
+
+/* Список треков */
+#playlist {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем стандартные отступы */
+    max-height: 300px; /* Максимальная высота */
+    overflow-y: auto; /* Вертикальный скролл */
+    background-color: #fba0e3; /* Полупрозрачный фон */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px; /* Внутренние отступы */
+}
+
+/* Стилизация скроллбара */
+#playlist::-webkit-scrollbar {
+    width: 8px; /* Ширина скроллбара */
+}
+
+/* Бегунок скроллбара */
+#playlist::-webkit-scrollbar-thumb {
+    background-color: #ff5e62; /* Цвет бегунка */
+    border-radius: 4px; /* Закругление углов */
+}
+
+/* Элемент списка треков */
+#playlist li {
+    padding: 10px 15px; /* Внутренние отступы */
+    border-bottom: 1px solid #333; /* Разделительная линия */
+    cursor: pointer; /* Курсор-указатель */
+    transition: all 0.2s; /* Плавные анимации */
+}
+
+/* Состояние при наведении на трек */
+#playlist li:hover {
+    background-color: rgba(255, 94, 98, 0.2); /* Подсветка фона */
+}
+
+/* Стиль текущего трека */
+#playlist li.playing {
+    background-color: rgba(255, 94, 98, 0.4); /* Акцентный фон */
+    font-weight: bold; /* Жирный текст */
+    color: #fff; /* Белый текст */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .audio-container {
+        padding: 15px; /* Уменьшаем отступы */
+    }
+    
+    .player-controls button {
+        width: 45px; /* Уменьшаем размер кнопок */
+        height: 45px;
+    }
+}
+
+
+footer{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+footer span{
+    font-size: 25px;
+}
+
+.test{
+    display: flex;
+    margin-left: 500px;
+    margin-top: 25px;
+    margin-right: 500px;
+}
